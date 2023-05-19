@@ -79,7 +79,7 @@ h1 {
 
 
 .inline-word-colour {
-    color: #B83301;
+    color: #f08f46;
 }
 
 #header {
@@ -141,7 +141,7 @@ nav ul li a::after {
     content: "";
     width: 0; /* om ervoor te zorgen dat enkel zichtbaar wordt als we erover hoveren */
     height: 3px;
-    background: #B83301;
+    background: #f08f46;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -218,7 +218,7 @@ nav ul li a:hover::after {
     content: "";
     width: 0;
     height: 3px;
-    background: #B83301;
+    background: #f08f46;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -231,4 +231,21 @@ nav ul li a:hover::after {
 }
 
 
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
 
+.tab-contents ul li span{
+    color: #f08f46;
+    font-size: 14px;
+}
+
+.tab-contents {
+    display: none;
+}
+
+
+.tab-contents.active-tab {
+    display: block;
+}
