@@ -39,7 +39,11 @@
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">Contact</a></li>
+                    <i class="fa-solid fa-x fas" id="x"></i>
+
                 </ul>
+                <i class="fa-solid fa-bars fas" id="hamburger"></i>
+
             </nav>
 
             <!--    -----------------------------------HERO  ------------------------------------ -->
@@ -77,9 +81,9 @@
                     change.
                 </p>
                 <div class="tab-titles">
-                    <p class="tab-links active-link">Skills</p>
-                    <p class="tab-links">Experience</p>
-                    <p class="tab-links">Impact</p>
+                    <p class="tab-links active-link" id="skills">Skills</p>
+                    <p class="tab-links" id="experience">Experience</p>
+                    <p class="tab-links" id="impact">Impact</p>
                 </div>
                 <!-------------------------------------------ALL TAB CONTENTS ------------------->
 
@@ -288,11 +292,15 @@
                     <input name="Name" placeholder="Your Name" required type="text"/>
                     <input name="email" placeholder="email" required type="email"/>
                     <textarea name="Message" placeholder="Your Message" rows="6"></textarea>
-                    <button type="submit">Submit</button>
+                    <button class="btn btn2" type="submit">Submit</button>
                 </form>
             </div>
         </div>
     </div>
+    <div class="copyright">
+        <p>Copyright &copy; StackedForImpact. Made By Marlon H.</p>
+    </div>
 </div>
+<script src="app.js"></script>
 </body>
 </html>
