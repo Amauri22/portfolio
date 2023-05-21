@@ -462,14 +462,21 @@ form .btn2 {
 .copyright {
     width: 100%;
     text-align: center;
-    padding: 25px 0;
+    padding: 18px 0;
     background: #262626;
+    font-size: 12px;
     font-weight: 300;
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
 nav .fas {
     display: none;
+}
+
+#msg {
+    color: green;
+    display: block;
+    margin-top: -40px;
 }
 
 /*--------------MEDIA QUERIES------------*/
