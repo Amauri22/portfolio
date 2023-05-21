@@ -38,6 +38,7 @@
                     <li><a href="#">About</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Blog</a></li>
                     <li><a href="#">Contact</a></li>
                     <i class="fa-solid fa-x fas" id="x"></i>
 
@@ -288,10 +289,10 @@
                 </div>
             </div>
             <div class="contact-right">
-                <form>
-                    <input name="Name" placeholder="Your Name" required type="text"/>
+                <form name="submit-to-google-sheet">
+                    <input name="name" placeholder="Your Name" required type="text"/>
                     <input name="email" placeholder="email" required type="email"/>
-                    <textarea name="Message" placeholder="Your Message" rows="6"></textarea>
+                    <textarea name="message" placeholder="Your Message" rows="6"></textarea>
                     <button class="btn btn2" type="submit">Submit</button>
                 </form>
             </div>
@@ -302,5 +303,16 @@
     </div>
 </div>
 <script src="app.js"></script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxucrpgkLvslLbCvEtB1jVbd9O32LinPAzvAX47vMs0R9Mejgp_6f4sgk9KGiSnRvfd/exec'
+    const form = document.forms['submit-to-google-sheet']
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+    })
+</script>
 </body>
 </html>

@@ -9,15 +9,17 @@ const tabContents = document.getElementsByClassName("tab-contents");
 
 
 
-openMenu.addEventListener("click", function () {
-    console.log("i got clicked");
+openMenu.addEventListener("click", openSidebar);
+
+closeMenu.addEventListener("click", closeSidebar)
+
+function openSidebar(){
     navBar.style.right = "0";
-})
+}
 
-closeMenu.addEventListener("click", function () {
+function closeSidebar(){
     navBar.style.right = "-200px";
-})
-
+}
 // tabTitles.addEventListener("click", function(e) {
 //     console.log(e.target, "i got clicked")
 //     console.log(e.currentTarget);
