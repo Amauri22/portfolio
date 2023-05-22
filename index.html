@@ -33,12 +33,25 @@
                 >I</span
                 >mpact
                 </h1>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul class="nav--links">
+                    <li class="nav--item">
+                        <a href="#" class="nav--link">Home</a>
+                    </li>
+                    <li class="nav--item">
+                        <a href="#about" class="nav--link">About</a>
+                    </li>
+                    <li class="nav--item">
+                        <a href="#services" class="nav--link">Services</a>
+                    </li>
+                    <li class="nav--item">
+                        <a href="#portfolio" class="nav--link">Portfolio</a>
+                    </li >
+                    <li class="nav--item">
+                        <a href="#" class="nav--link">Blog</a>
+                    </li>
+                    <li class="nav--item">
+                        <a href="#contact" class="nav--link">Contact</a>
+                    </li >
                     <i class="fa-solid fa-x fas" id="x"></i>
 
                 </ul>
@@ -57,10 +70,12 @@
                     <span class="inline-underline">Impact-Driven</span>
                     Solutions
                 </h1>
-                <a href="#" id="learn-more-header">Learn more &darr;</a>
+                <a href="#" class="btn" id="learn-more-header">Learn More &darr;</a>
+
             </div>
         </div>
     </div>
+
 </div>
 
 <!---------------------------------------------------ABOUT----------------------------------------->
@@ -289,18 +304,19 @@
                 </div>
             </div>
             <div class="contact-right">
-                <form>
-                    <input name="Name" placeholder="Your Name" required type="text"/>
+                <form name='submit-to-google-sheet' id="contactForm">
+                    <input name="name" placeholder="Your Name" required type="text"/>
                     <input name="email" placeholder="email" required type="email"/>
-                    <textarea name="Message" placeholder="Your Message" rows="6"></textarea>
-                    <button class="btn btn2" type="submit">Submit</button>
+                    <textarea name="message" placeholder="Your Message" rows="6"></textarea>
+                    <button class="btn btn2" id="btn2" type="submit">Submit</button>
                 </form>
+                <span id="msg"></span>
             </div>
         </div>
     </div>
-</div>
-<div class="copyright">
-    <p>Copyright &copy; StackedForImpact. Made By Marlon H.</p>
+    <div class="copyright">
+        <p>Copyright &copy; StackedForImpact. Made By Marlon H.</p>
+    </div>
 </div>
 <script src="app.js"></script>
 </body>
