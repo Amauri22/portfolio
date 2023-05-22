@@ -5,6 +5,8 @@ const closeMenu = document.getElementById("x");
 const scriptURL = 'https://script.google.com/macros/s/AKfycbyRNEONVxCf4qJRsXzb9_IPUGT6OLWrFrVE6bCJnRhyJ0LssuVmLMKpDaNgXECWunwO/exec'
 const form = document.forms['submit-to-google-sheet']
 const msg = document.getElementById("msg")
+const learnMore = document.getElementById("learn-more-header")
+
 
 form.addEventListener('submit', e => {
     e.preventDefault()
@@ -23,6 +25,10 @@ openMenu.addEventListener("click", openSidebar);
 
 closeMenu.addEventListener("click", closeSidebar);
 
+learnMore.addEventListener("click", function(e) {
+    e.preventDefault();
+    document.getElementById("services").scrollIntoView({behavior: "smooth"})
+})
 
 
 
@@ -33,6 +39,8 @@ function openSidebar(){
 function closeSidebar(){
     navBar.style.right = "-200px";
 }
+
+
 
 // 1. add event listener to common parent element
 // 2. determine what element originated the event

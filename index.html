@@ -35,23 +35,23 @@
                 </h1>
                 <ul class="nav--links">
                     <li class="nav--item">
-                        <a href="#" class="nav--link">Home</a>
+                        <a class="nav--link" href="#">Home</a>
                     </li>
                     <li class="nav--item">
-                        <a href="#about" class="nav--link">About</a>
+                        <a class="nav--link" href="#about">About</a>
                     </li>
                     <li class="nav--item">
-                        <a href="#services" class="nav--link">Services</a>
+                        <a class="nav--link" href="#services">Services</a>
                     </li>
                     <li class="nav--item">
-                        <a href="#portfolio" class="nav--link">Portfolio</a>
-                    </li >
-                    <li class="nav--item">
-                        <a href="#" class="nav--link">Blog</a>
+                        <a class="nav--link" href="#portfolio">Portfolio</a>
                     </li>
                     <li class="nav--item">
-                        <a href="#contact" class="nav--link">Contact</a>
-                    </li >
+                        <a class="nav--link" href="#">Blog</a>
+                    </li>
+                    <li class="nav--item">
+                        <a class="nav--link" href="#contact">Contact</a>
+                    </li>
                     <i class="fa-solid fa-x fas" id="x"></i>
 
                 </ul>
@@ -70,7 +70,7 @@
                     <span class="inline-underline">Impact-Driven</span>
                     Solutions
                 </h1>
-                <a href="#" class="btn" id="learn-more-header">Learn More &darr;</a>
+                <a class="btn" href="#" id="learn-more-header">Learn More &darr;</a>
 
             </div>
         </div>
@@ -211,35 +211,45 @@
 <!-------------------------------SERVICES---------------------->
 <div id="services">
     <div class="container">
+
         <h1 class="sub-title">Our Services</h1>
-        <div class="services-list">
-            <div class="services-container">
-                <i class="fa-solid fa-code"></i>
-                <h2>Web/App Design</h2>
-                <p>
-                    We're passionate about helping our clients achieve their goals and
-                    make a difference in their communities and the world at large.
-                </p>
-                <a href="#">Learn more</a>
+        <div class="full-service-container">
+            <div class="services-list">
+                <div class="services-container">
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web/App Design</h2>
+                    <p>
+                        We're passionate about helping our clients achieve their goals and
+                        make a difference in their communities and the world at large.
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="services-container">
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>
+                        We create visually appealing and intuitive interfaces,
+                        incorporating your vision for a compelling digital experience.
+                        Boost engagement and satisfaction.
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="services-container">
+                    <i class="fa-solid fa-sun"></i>
+                    <h2>Motivational Guidance</h2>
+                    <p>
+                        Unlock your potential. Overcome challenges, set goals, and stay
+                        motivated. Start your transformative journey today.
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
             </div>
-            <div class="services-container">
-                <i class="fa-solid fa-crop"></i>
-                <h2>UI/UX Design</h2>
-                <p>
-                    We create visually appealing and intuitive interfaces,
-                    incorporating your vision for a compelling digital experience.
-                    Boost engagement and satisfaction.
-                </p>
-                <a href="#">Learn more</a>
-            </div>
-            <div class="services-container">
-                <i class="fa-solid fa-sun"></i>
-                <h2>Motivational Guidance</h2>
-                <p>
-                    Unlock your potential. Overcome challenges, set goals, and stay
-                    motivated. Start your transformative journey today.
-                </p>
-                <a href="#">Learn more</a>
+            <div class="info-service">
+                <button class="btn btn2 btn3">Web/App Design</button>
+                <button class="btn btn2 btn3">UI/UX Design</button>
+                <button class="btn btn2 btn3">Motivational Guidance</button>
+
+
             </div>
         </div>
     </div>
@@ -304,7 +314,7 @@
                 </div>
             </div>
             <div class="contact-right">
-                <form name='submit-to-google-sheet' id="contactForm">
+                <form id="contactForm" name="submit-to-google-sheet">
                     <input name="name" placeholder="Your Name" required type="text"/>
                     <input name="email" placeholder="email" required type="email"/>
                     <textarea name="message" placeholder="Your Message" rows="6"></textarea>
