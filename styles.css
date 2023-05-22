@@ -104,9 +104,15 @@ h1 {
 
 #header-content {
     position: relative;
-    z-index: 1;
 }
 
+#learn-more-header {
+    display: inline-block;
+    font-size: 14px;
+    padding: 10px 30px;
+
+
+}
 img {
     /*position: absolute;*/
     /*z-index: 20;*/

@@ -1,10 +1,7 @@
 "use strict"
 const openMenu = document.getElementById("hamburger");
-const navBar = document.querySelector("nav ul");
+const navLinks = document.querySelector(".nav--links");
 const closeMenu = document.getElementById("x");
-const tabTitles = document.querySelector(".tab-titles");
-const tabLinks = document.getElementsByClassName("tab-links");
-const tabContents = document.getElementsByClassName("tab-contents");
 const scriptURL = 'https://script.google.com/macros/s/AKfycbyRNEONVxCf4qJRsXzb9_IPUGT6OLWrFrVE6bCJnRhyJ0LssuVmLMKpDaNgXECWunwO/exec'
 const form = document.forms['submit-to-google-sheet']
 const msg = document.getElementById("msg")
@@ -27,6 +24,8 @@ openMenu.addEventListener("click", openSidebar);
 closeMenu.addEventListener("click", closeSidebar);
 
 
+
+
 function openSidebar(){
     navBar.style.right = "0";
 }
@@ -35,12 +34,20 @@ function closeSidebar(){
     navBar.style.right = "-200px";
 }
 
+// 1. add event listener to common parent element
+// 2. determine what element originated the event
 
-// tabTitles.addEventListener("click", function(e) {
-//     console.log(e.target, "i got clicked")
-//     console.log(e.currentTarget);
-// });
-
+navLinks.addEventListener("click", function(e){
+    e.preventDefault()
+    
+    
+    // matching strategy
+    if (e.target.classList.contains("nav--link")){
+       const id = e.target.getAttribute("href");
+        console.log(id)
+        document.querySelector(id).scrollIntoView({behavior: "smooth"})
+    }
+})
 
 
 
