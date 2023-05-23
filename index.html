@@ -97,14 +97,14 @@
                     change.
                 </p>
                 <div class="tab-titles">
-                    <p class="tab-links active-link" id="skills">Skills</p>
-                    <p class="tab-links" id="experience">Experience</p>
-                    <p class="tab-links" id="impact">Impact</p>
+                    <p class="tab-links active-link" data-tab="1">Skills</p>
+                    <p class="tab-links" data-tab="2" id="experience">Experience</p>
+                    <p class="tab-links" data-tab="3" id="impact">Impact</p>
                 </div>
                 <!-------------------------------------------ALL TAB CONTENTS ------------------->
 
                 <!-------------------------------------  SKILLS ------------------------------------- -->
-                <div class="tab-contents active-tab">
+                <div class="tab-contents active-tab tab-contents-1">
                     <ul>
                         <li><span>UI/UX</span><br/>Designing Web/App interfaces</li>
                         <li><span>Web Development</span><br/>Web app Development</li>
@@ -115,7 +115,7 @@
                 </div>
 
                 <!---------------------------------------EXPERIENCE----------------------------------->
-                <div class="tab-contents">
+                <div class="tab-contents tab-contents-2">
                     <ul>
                         <li>
                             <span>Programming Expertise</span><br/>
@@ -165,7 +165,7 @@
                 </div>
 
                 <!--------------------------------- IMPACT -------------------------------------------->
-                <div class="tab-contents">
+                <div class="tab-contents tab-contents-3">
                     <ul>
                         <li>
                             <span>Coaching and Self-Improvement</span><br/>
@@ -211,49 +211,102 @@
 <!-------------------------------SERVICES---------------------->
 <div id="services">
     <div class="container">
-
         <h1 class="sub-title">Our Services</h1>
-        <div class="full-service-container">
-            <div class="services-list">
-                <div class="services-container">
+        <div class="services-list">
+            <div class="services-container">
+                <i class="fa-solid fa-code"></i>
+                <h2>Web/App Design</h2>
+                <p>
+                    We're passionate about helping our clients achieve their goals and
+                    make a difference in their communities and the world at large.
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+            <div class="services-container">
+                <i class="fa-solid fa-crop"></i>
+                <h2>UI/UX Design</h2>
+                <p>
+                    We create visually appealing and intuitive interfaces,
+                    incorporating your vision for a compelling digital experience.
+                    Boost engagement and satisfaction.
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+            <div class="services-container">
+                <i class="fa-solid fa-sun"></i>
+                <h2>Motivational Guidance</h2>
+                <p>
+                    Unlock your potential. Overcome challenges, set goals, and stay
+                    motivated. Start your transformative journey today.
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+
+        <!--      -----------------------------  OPERATIONS -------------------------------->
+        <div class="operations">
+
+            <!--    ------------------        TABS-->
+
+            <div class="operations__tab-container">
+                <button class="btn1 operations__tab operations__tab--1 operations__tab--active"
+                        data-tab="1"><span>01</span> Web/App Design
+                </button>
+                <button class="btn1 operations__tab operations__tab--2"
+                        data-tab="2"><span>02</span> UI/UX Design
+                </button>
+                <button class="btn1 operations__tab operations__tab--3"
+                        data-tab="3"><span>03</span> Motivational Guidance
+                </button>
+            </div>
+
+            <!--           ---------------------- Content -->
+            <div
+                    class="operations__content operations__content--1 operations__content--active"
+            >
+                <div class="operations__icon operations__icon--1">
                     <i class="fa-solid fa-code"></i>
-                    <h2>Web/App Design</h2>
-                    <p>
-                        We're passionate about helping our clients achieve their goals and
-                        make a difference in their communities and the world at large.
-                    </p>
-                    <a href="#">Learn more</a>
                 </div>
-                <div class="services-container">
+                <h3 class="operations__header">
+                    Captivating and user-friendly digital experiences.
+                </h3>
+                <p>
+                    From websites to mobile apps, we bring your vision to life with stunning designs. Elevate your
+                    digital presence today.
+                </p>
+            </div>
+
+            <div class="operations__content operations__content--2">
+                <div class="operations__icon operations__icon--2">
                     <i class="fa-solid fa-crop"></i>
-                    <h2>UI/UX Design</h2>
-                    <p>
-                        We create visually appealing and intuitive interfaces,
-                        incorporating your vision for a compelling digital experience.
-                        Boost engagement and satisfaction.
-                    </p>
-                    <a href="#">Learn more</a>
                 </div>
-                <div class="services-container">
+                <h3 class="operations__header">
+                    Captivate users with our UI/UX design.
+                </h3>
+                <p>
+                    We prioritize user needs, conducting research and testing to craft intuitive interfaces. Our
+                    collaborative approach ensures your vision is incorporated, resulting in captivating and
+                    user-centric designs. Enhance user satisfaction and engagement with our UI/UX expertise. Contact us
+                    today to unlock the full potential of your digital presence.
+                </p>
+            </div>
+            <div class="operations__content operations__content--3">
+                <div class="operations__icon operations__icon--3">
                     <i class="fa-solid fa-sun"></i>
-                    <h2>Motivational Guidance</h2>
-                    <p>
-                        Unlock your potential. Overcome challenges, set goals, and stay
-                        motivated. Start your transformative journey today.
-                    </p>
-                    <a href="#">Learn more</a>
                 </div>
+                <h3 class="operations__header">
+                    Unlock your true potential and achieve personal growth.
+                </h3>
+                <p>
+                    Our experienced team provides personalized support to overcome challenges, set meaningful goals, and
+                    maintain a motivated mindset. Contact us to embark on a transformative journey today.
+                </p>
             </div>
-            <div class="info-service">
-                <button class="btn btn2 btn3">Web/App Design</button>
-                <button class="btn btn2 btn3">UI/UX Design</button>
-                <button class="btn btn2 btn3">Motivational Guidance</button>
 
-
-            </div>
         </div>
     </div>
 </div>
+
 
 <!--  -------------PORTFOLIO------------------>
 <div id="portfolio">

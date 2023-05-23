@@ -232,8 +232,8 @@ nav ul li a:hover::after {
     transition: 0.5s;
 }
 
-.tab-links.active-link::after {
-    width: 50%;
+.active-link::after {
+    width: 70%;
 
 }
 
@@ -271,11 +271,6 @@ nav ul li a:hover::after {
     /*grid-template-rows: 1fr;*/
 }
 
-.full-service-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
 
 .services-container {
     display: grid;
@@ -317,17 +312,123 @@ nav ul li a:hover::after {
 
 }
 
-.info-service {
-    display: flex;
-    height: 100px;
-    background: #B83301;
-    margin: 40px 0;
-    padding: 100px 0;
-    align-items: end;
+.operations {
+    max-width: 110rem;
+    margin: 14rem auto 0 auto;
+    /*background: #262626;*/
+
 }
 
-.info-service button {
-    font-size: ;
+.operations__tab-container {
+    display: flex;
+    justify-content: center;
+    border-radius: 10px 10px 0 0;
+    background: #262626;
+
+}
+
+.operations__tab {
+    margin-right: 3rem;
+    transform: translateY(-50%);
+}
+
+.operations__tab span {
+    margin-right: 1rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.btn1 {
+    display: inline-block;
+    background: #B83301;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: inherit;
+    border: none;
+    padding: 10px;
+    border-radius: 10rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 25%;
+    color: #e7e7e7;
+}
+
+.operations__tab--1 {
+    background-color: #b56e3d;
+}
+
+.operations__tab--1:hover {
+    background-color: #683f23;
+}
+
+.operations__tab--2 {
+    background: #B83301;
+}
+
+.operations__tab--2:hover {
+    background: #cd704d;
+}
+
+.operations__tab--3 {
+    background: #e88c3e;
+}
+
+.operations__tab--3:hover {
+    background: #b28941;
+}
+
+.operations__tab--active {
+    transform: translateY(-66%);
+}
+
+
+.operations__content {
+    display: none;
+    background: #262626;
+    border-radius: 0 0 10px 10px;
+}
+
+.operations__content--active {
+    padding: 15px 80px 82px 80px;
+    display: grid;
+    grid-template-columns: 7rem 1fr;
+    column-gap: 3rem;
+    row-gap: 0.5rem;
+
+}
+
+
+
+.operations__header {
+    font-size: 2.25rem;
+    font-weight: 500;
+    align-self: center;
+}
+
+.operations__icon {
+    display: flex;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+}
+
+.operations__icon--1 {
+    background: #b56e3d;
+}
+
+.operations__icon--2 {
+    background: #B83301;
+}
+
+.operations__icon--3 {
+    background: #e88c3e;
+}
+
+.operations p {
+    grid-column: 2;
 }
 
 /*------- PORTFOLIO -------------*/
@@ -416,7 +517,6 @@ nav ul li a:hover::after {
 .btn:hover {
     background: #B83301;
 }
-
 
 
 /*---------------- CONTACT ------------------*/
