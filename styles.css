@@ -600,6 +600,10 @@ nav .fas {
     display: none;
 }
 
+.nav--link {
+    transition: opacity 0.5s ease ;
+}
+
 #msg {
     color: green;
     display: block;

@@ -1,12 +1,20 @@
 "use strict"
 const openMenu = document.getElementById("hamburger");
-const navLinks = document.querySelector(".nav--links");
 const closeMenu = document.getElementById("x");
 const scriptURL = 'https://script.google.com/macros/s/AKfycbyRNEONVxCf4qJRsXzb9_IPUGT6OLWrFrVE6bCJnRhyJ0LssuVmLMKpDaNgXECWunwO/exec'
-const form = document.forms['submit-to-google-sheet']
-const msg = document.getElementById("msg")
-const learnMore = document.getElementById("learn-more-header")
-const navBar = document.querySelector("nav ul")
+const form = document.forms['submit-to-google-sheet'];
+const msg = document.getElementById("msg");
+const learnMore = document.getElementById("learn-more-header");
+const nav = document.querySelector(".nav")
+const navBar = document.querySelector("nav ul");
+const navLinks = document.querySelector(".nav--links");
+const tabTitlesContainer = document.querySelector(".tab-titles");
+const tabLinks = document.querySelectorAll(".tab-links");
+const skillContent = document.querySelectorAll(".tab-contents");
+const tabs = document.querySelectorAll(".operations__tab");
+const tabsContainer = document.querySelector(".operations__tab-container");
+const tabsContent = document.querySelectorAll(".operations__content");
+
 
 // FORM HANDLER
 form.addEventListener('submit', e => {
@@ -58,9 +66,6 @@ navLinks.addEventListener("click", function (e) {
 })
 
 /* TABBED COMPONENTS OPERATIONS */
-const tabs = document.querySelectorAll(".operations__tab");
-const tabsContainer = document.querySelector(".operations__tab-container");
-const tabsContent = document.querySelectorAll(".operations__content");
 
 tabsContainer.addEventListener("click", function (e) {
     const clicked = e.target.closest(".operations__tab");
@@ -88,9 +93,7 @@ tabsContainer.addEventListener("click", function (e) {
 })
 
 /* about us tab links */
-const tabTitlesContainer = document.querySelector(".tab-titles")
-const tabLinks = document.querySelectorAll(".tab-links")
-const skillContent = document.querySelectorAll(".tab-contents")
+
 
 tabTitlesContainer.addEventListener("click", function (e) {
     const clicked = e.target.closest(".tab-links");
@@ -101,10 +104,79 @@ tabTitlesContainer.addEventListener("click", function (e) {
 
 
     const activeTab = document.querySelector(`.tab-contents-${clicked.dataset.tab}`);
-    activeTab.classList.add("active-tab")
-
+    activeTab.classList.add("active-tab");
 
 })
+
+/* Menu Fade animation */
+nav.addEventListener("mouseover", function (e) {
+    if (e.target.classList.contains("nav--link")) {
+        const link = e.target;
+        const siblings = link.closest(".nav").querySelectorAll(".nav--link")
+
+
+        siblings.forEach(el => {
+            if (el !== link) el.style.opacity = 0.5;
+
+        });
+
+
+    }
+})
+nav.addEventListener("mouseout", function (e) {
+    if (e.target.classList.contains("nav--link")) {
+        const link = e.target;
+        const siblings = link.closest(".nav").querySelectorAll(".nav--link")
+        const logo = link.closest(".nav").querySelector("h1")
+
+        siblings.forEach(el => {
+            if (el !== link) el.style.opacity = 1;
+        });
+        logo.style.opacity = 1;
+
+    }
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
